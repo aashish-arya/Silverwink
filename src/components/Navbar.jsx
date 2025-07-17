@@ -1,0 +1,147 @@
+import React, { useState } from 'react'
+import { NavLink } from 'react-router-dom'
+import { TiSocialFacebook } from "react-icons/ti";
+import { RiTwitterXFill } from "react-icons/ri";
+import { IoLogoInstagram } from "react-icons/io";
+import { IoIosCall } from "react-icons/io";
+import { FaArrowRight } from "react-icons/fa";
+import sitelogo from '../assets/silverwinkLogo.png'
+
+const Navbar = () => {
+    const [isOpen, setIsOpen] = useState(false)
+    return (
+        <div>
+            <nav className='flex min-w-screen px-3 sm:px-12 py-2 gap-4 md:justify-around justify-between items-center'>
+                <img width={60} src={sitelogo} alt="" />
+                <ul className=' gap-5 hidden md:flex'>
+                    <div className='group relative'>
+                        <NavLink to='/' className="flex flex-col items-center gap-1">
+                            <p>HOME</p>
+                            <span className="h-[2px] w-0 bg-black transition-all duration-300 group-hover:w-full origin-center"></span>
+                        </NavLink>
+                        <div className='absolute z-20 py-8 w-52 left-1/2 transform -translate-x-1/2 opacity-0 scale-95 group-hover:opacity-100 group-hover:scale-100 transition-all duration-600 ease-in-out pointer-events-none group-hover:pointer-events-auto'>
+                            <div className=' border bg-white'>
+                                <div className='text-center hover:bg-amber-100 hover:cursor-pointer py-2 border-b border-gray-500'>OPTION 1</div>
+                                <div className='text-center hover:bg-amber-100 hover:cursor-pointer py-2 border-b border-gray-500'>OPTION 1</div>
+                                <div className='text-center hover:bg-amber-100 hover:cursor-pointer py-2 border-b border-gray-500'>OPTION 1</div>
+                                <div className='text-center hover:bg-amber-100 hover:cursor-pointer py-2 border-b border-gray-500'>OPTION 1</div>
+                                <div className='text-center hover:bg-amber-100 hover:cursor-pointer py-2 border-b border-gray-500'>OPTION 1</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className='group relative'>
+                        <NavLink to='/page' className="flex flex-col items-center gap-1">
+                            <p>PAGE</p>
+                            <span className="h-[2px] w-0 bg-black transition-all duration-300 group-hover:w-full origin-center"></span>
+                        </NavLink>
+                        <div className='absolute z-20 py-8 w-52 left-1/2 transform -translate-x-1/2 opacity-0 scale-95 group-hover:opacity-100 group-hover:scale-100 transition-all duration-600 ease-in-out pointer-events-none group-hover:pointer-events-auto'>
+                            <div className=' border bg-white'>
+                                <div className='text-center hover:bg-amber-100 hover:cursor-pointer py-2 border-b border-gray-500'>OPTION 1</div>
+                                <div className='text-center hover:bg-amber-100 hover:cursor-pointer py-2 border-b border-gray-500'>OPTION 1</div>
+                                <div className='text-center hover:bg-amber-100 hover:cursor-pointer py-2 border-b border-gray-500'>OPTION 1</div>
+                                <div className='text-center hover:bg-amber-100 hover:cursor-pointer py-2 border-b border-gray-500'>OPTION 1</div>
+                                <div className='text-center hover:bg-amber-100 hover:cursor-pointer py-2 border-b border-gray-500'>OPTION 1</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className='group relative'>
+                        <NavLink to='/services' className="flex flex-col items-center gap-1">
+                            <p>SERVICES</p>
+                            <span className="h-[2px] w-0 bg-black transition-all duration-300 group-hover:w-full origin-center"></span>
+                        </NavLink>
+                        <div className='absolute z-20 py-8 w-52 left-1/2 transform -translate-x-1/2 opacity-0 scale-95 group-hover:opacity-100 group-hover:scale-100 transition-all duration-600 ease-in-out pointer-events-none group-hover:pointer-events-auto'>
+                            <div className=' border bg-white'>
+                                <div className='text-center hover:bg-amber-100 hover:cursor-pointer py-2 border-b border-gray-500'>OPTION 1</div>
+                                <div className='text-center hover:bg-amber-100 hover:cursor-pointer py-2 border-b border-gray-500'>OPTION 1</div>
+                                <div className='text-center hover:bg-amber-100 hover:cursor-pointer py-2 border-b border-gray-500'>OPTION 1</div>
+                                <div className='text-center hover:bg-amber-100 hover:cursor-pointer py-2 border-b border-gray-500'>OPTION 1</div>
+                                <div className='text-center hover:bg-amber-100 hover:cursor-pointer py-2 border-b border-gray-500'>OPTION 1</div>
+                            </div>
+                        </div>
+                    </div>
+                    <NavLink to='/shop' className="flex group flex-col items-center gap-1">
+                        <p>SHOP</p>
+                        <span className="h-[2px] w-0 bg-black transition-all duration-300 group-hover:w-full origin-center"></span>
+                    </NavLink>
+                    <NavLink to='/news' className="flex group flex-col items-center gap-1">
+                        <p>NEWS</p>
+                        <span className="h-[2px] w-0 bg-black transition-all duration-300 group-hover:w-full origin-center"></span>
+                    </NavLink>
+                    <div className='group relative'>
+                        <NavLink to='/contact' className="flex flex-col items-center gap-1">
+                            <p>CONTACT</p>
+                            <span className="h-[2px] w-0 bg-black transition-all duration-300 group-hover:w-full origin-center"></span>
+                        </NavLink>
+                        <div className='absolute z-20 py-8 w-52 left-1/2 transform -translate-x-1/2 opacity-0 scale-95 group-hover:opacity-100 group-hover:scale-100 transition-all duration-600 ease-in-out pointer-events-none group-hover:pointer-events-auto'>
+                            <div className=' border bg-white'>
+                                <div className='text-center hover:bg-amber-100 hover:cursor-pointer py-2 border-b border-gray-500'>OPTION 1</div>
+                                <div className='text-center hover:bg-amber-100 hover:cursor-pointer py-2 border-b border-gray-500'>OPTION 1</div>
+                                <div className='text-center hover:bg-amber-100 hover:cursor-pointer py-2 border-b border-gray-500'>OPTION 1</div>
+                                <div className='text-center hover:bg-amber-100 hover:cursor-pointer py-2 border-b border-gray-500'>OPTION 1</div>
+                                <div className='text-center hover:bg-amber-100 hover:cursor-pointer py-2 border-b border-gray-500'>OPTION 1</div>
+                            </div>
+                        </div>
+                    </div>
+                </ul>
+                <div className='flex items-center'>
+                    <div className='  flex md:hidden lg:flex justify-self-auto  lg:w-32 items-center gap-4 lg:gap-5'>
+                        <TiSocialFacebook className='text-gray-300 hover:text-black hover:cursor-pointer transition-colors duration-400 ease-in' size={24} />
+                        <RiTwitterXFill className='text-gray-300 hover:text-black hover:cursor-pointer transition-colors duration-400 ease-in' size={20} />
+                        <IoLogoInstagram className='text-gray-300 hover:text-black hover:cursor-pointer transition-colors duration-400 ease-in' size={20} />
+                    </div>
+                    <div className=' border-l hidden xl:flex border-gray-500 items-center px-5'>
+                        <IoIosCall /> <span>+91-6396964636</span>
+                    </div>
+                </div>
+                <div className='bg-[#f0b249]  font-medium hover:scale-105 active:scale-95 active:bg-black active:text-white hover:bg-black hover:cursor-pointer hover:text-white transition-all duration-100 rounded-4xl lg:px-5 px-3 py-1 lg:py-2 text-xs sm:text-[17px]'>Free Consultation</div>
+                <div className='md:hidden'>
+                    <button onClick={() => setIsOpen(!isOpen)} className='focus:outline-none'>
+                        <div className='space-y-1'>
+                            <span className='block w-6 h-0.5 bg-black'></span>
+                            <span className='block w-6 h-0.5 bg-black'></span>
+                            <span className='block w-6 h-0.5 bg-black'></span>
+                        </div>
+                    </button>
+                </div>
+            </nav>
+            <div className={`fixed top-0 right-0 h-full w-64 bg-white shadow-lg z-50 transform transition-transform duration-300 ease-in-out ${isOpen ? 'translate-x-0' : 'translate-x-full'}`}>
+                <div className="flex justify-between items-center px-4 py-4 border-b">
+                    <img width={45} src={sitelogo} alt="logo" />
+                    <button onClick={() => setIsOpen(false)} className='text-2xl font-bold'><FaArrowRight /></button>
+                </div>
+                <ul className='flex flex-col gap-4 text-center py-4'>
+                    <NavLink onClick={() => setIsOpen(false)} to='/' className="hover:text-[#f0b249] hover:bg-black w-full h-full border-b">HOME</NavLink>
+                    <NavLink onClick={() => setIsOpen(false)} to='/page' className="hover:text-[#f0b249] hover:bg-black w-full border-b">PAGE</NavLink>
+                    <NavLink onClick={() => setIsOpen(false)} to='/services' className="hover:text-[#f0b249] hover:bg-black w-full border-b">SERVICES</NavLink>
+                    <NavLink onClick={() => setIsOpen(false)} to='/shop' className="hover:text-[#f0b249] hover:bg-black w-full border-b">SHOP</NavLink>
+                    <NavLink onClick={() => setIsOpen(false)} to='/news' className="hover:text-[#f0b249] hover:bg-black w-full border-b">NEWS</NavLink>
+                    <NavLink onClick={() => setIsOpen(false)} to='/contact' className="hover:text-[#f0b249] hover:bg-black w-full border-b">CONTACT</NavLink>
+                </ul>
+                <div className='flex items-center justify-center'>
+                    <div className='  flex md:hidden lg:flex justify-self-auto  lg:w-32 items-center gap-4 lg:gap-5'>
+                        <TiSocialFacebook className=' hover:text-black hover:cursor-pointer transition-colors duration-400 ease-in' size={24} />
+                        <RiTwitterXFill className=' hover:text-black hover:cursor-pointer transition-colors duration-400 ease-in' size={20} />
+                        <IoLogoInstagram className=' hover:text-black hover:cursor-pointer transition-colors duration-400 ease-in' size={20} />
+                    </div>
+                    <div className=' border-l hidden xl:flex border-gray-500 items-center px-5'>
+                        <IoIosCall /> <span>+91-6396964636</span>
+                    </div>
+                </div>
+            </div>
+
+            {/* Overlay */}
+            {isOpen && (
+                <div
+                    onClick={() => setIsOpen(false)}
+                    className='fixed inset-0 bg-black opacity-10 z-40'
+                ></div>
+            )}
+
+            <hr />
+
+        </div>
+
+    )
+}
+
+export default Navbar
