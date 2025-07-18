@@ -339,7 +339,7 @@ const Hero = () => {
                             <h1 className=' bg-gradient-to-r from-[#0a9695] to-[#b8e96d]  bg-clip-text text-transparent text-2xl'>Our services</h1>
                         </div>
                         
-                        <h1 className='text-4xl bg-gradient-to-r from-[#b8e96d] to-[#0a9695]  bg-clip-text text-transparent mt-6 w-1/2'>For your very specific industry, we have <span className=''>highly-tailored IT solutions.</span></h1>
+                        <h1 className='text-4xl bg-gradient-to-r from-[#b8e96d] to-[#0a9695]  bg-clip-text text-transparent mt-10 md:mt-13 text-center md:w-1/2'>For your very specific industry, we have <span className=''>highly-tailored IT solutions.</span></h1>
                     </div>
                     <div className='mt-25' >
                         <AutoSlider slides={cards} />
