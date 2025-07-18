@@ -1,4 +1,3 @@
-// components/AutoSlider.jsx
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
@@ -6,7 +5,6 @@ import 'swiper/css/autoplay';
 import { Autoplay } from 'swiper/modules';
 
 const AutoSlider = ({ slides }) => {
-
     return (
         <Swiper
             modules={[Autoplay]}
@@ -14,7 +12,7 @@ const AutoSlider = ({ slides }) => {
             slidesPerView={1}
             loop={true}
             autoplay={{
-                delay: 2000,
+                delay: 2500,
                 disableOnInteraction: false,
             }}
             breakpoints={{
@@ -25,28 +23,22 @@ const AutoSlider = ({ slides }) => {
         >
             {slides.map((item, index) => (
                 <SwiperSlide key={index}>
-                    <div className="relative overflow-hidden rounded-3xl shadow-lg cursor-pointer group">
-
-                        {/* Image with hover scale */}
+                    <div className="flex flex-col items-center text-center bg-white/5 backdrop-blur-md rounded-3xl shadow-lg py-5 px-5 h-[350px] justify-around hover:shadow-xl transition duration-300 group cursor-pointer">
+                        {/* Image */}
                         <img
                             src={item.image}
                             alt={item.title}
-                            className="w-full object-cover rounded-3xl transition-transform duration-300 group-hover:scale-105"
+                            className="w-28 h-28 transition-transform duration-300 group-hover:scale-120"
                             loading="lazy"
                         />
 
-                        {/* Gradient Overlay */}
-                        <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent rounded-3xl opacity-70"></div>
+                        {/* Title */}
+                        <h3 className="text-white text-2xl">{item.title}</h3>
 
-                        {/* Title Text */}
-                        <div className="absolute bottom-6 left-10 flex text-white text-2xl font-semibold drop-shadow-md">
-                            {item.title}
-                        </div>
+                        {/* Description */}
+                        <p className="text-white text-lg opacity-80">{item.description}</p>
                     </div>
                 </SwiperSlide>
-
-
-
             ))}
         </Swiper>
     );

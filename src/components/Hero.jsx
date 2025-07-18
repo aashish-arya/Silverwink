@@ -10,6 +10,7 @@ import CountUp from 'react-countup';
 import ScrollCountUp from './ScrollCountup';
 import ScrollReveal from './Scrollreveal';
 import AutoSlider from './AutoSlider';
+import ServiceMarquee from './ServiceMarquee';
 
 // React icons
 import { BsLightningChargeFill } from "react-icons/bs";
@@ -17,7 +18,7 @@ import { FaArrowRightLong } from "react-icons/fa6";
 import { FaNfcDirectional } from "react-icons/fa6";
 import { FaArrowLeftLong } from "react-icons/fa6";
 import { FaArrowRight } from "react-icons/fa";
-import { MdOutlineStar } from "react-icons/md";
+import { MdDescription, MdOutlineStar } from "react-icons/md";
 import { IoDiamondSharp } from "react-icons/io5";
 import { RiBriefcase2Line } from "react-icons/ri";
 import { FaCheckCircle } from "react-icons/fa";
@@ -31,6 +32,9 @@ import client4 from '../assets/client-4.png'
 import meeting1 from '../assets/meeting1.jpg'
 import meeting2 from '../assets/meeting2.jpg'
 import aboutimg from '../assets/about-image.png'
+import section1 from '../assets/section1.webp';
+import section2 from '../assets/section2.webp';
+import section3 from '../assets/section3.webp';
 
 // start
 const Hero = () => {
@@ -49,20 +53,39 @@ const Hero = () => {
 
     const cards = [
         {
-            title: "Technology IT",
-            image: "https://html.kodesolution.com/2025/finclix-html/images/home-1/project/project-01.jpg",
+            image: section1,
+            title: "IT Design",
+            description: "We provide the most responsive and functional IT design for companies and businesses worldwide."
         },
         {
-            title: "Orion Finance",
-            image: "https://html.kodesolution.com/2025/finclix-html/images/home-1/project/project-02.jpg",
+            image: section2,
+            title: "IT Management",
+            description: "It’s possible to simultaneously manage and transform information from one server to another."
         },
         {
-            title: "Business firm",
-            image: "https://html.kodesolution.com/2025/finclix-html/images/home-1/project/project-03.jpg",
+            image: section3,
+            title: "Data Security",
+            description: "Back up your database, store in a safe and secure place while still maintaining its accessibility."
         },
         {
-            title: "Additional Data",
-            image: "https://html.kodesolution.com/2025/finclix-html/images/home-1/project/project-02.jpg",
+            image: section1,
+            title: "Web Development",
+            description: "We build modern, fast, and scalable websites tailored for your business success."
+        },
+        {
+            image: section2,
+            title: "Mobile App Development",
+            description: "We create smooth, secure, and high-performing mobile apps for iOS and Android."
+        },
+        {
+            image: section3,
+            title: "Digital Marketing",
+            description: "Grow your brand with targeted SEO, ads, and social media strategies that convert."
+        },
+        {
+            image: section1,
+            title: "Graphic Designing",
+            description: "We design eye-catching visuals that align perfectly with your business identity."
         },
     ];
 
@@ -266,140 +289,68 @@ const Hero = () => {
                 </ScrollReveal>
             </div>
 
-            <div className="fourth flex flex-wrap justify-center items-center gap-8 px-4 sm:px-8 md:px-16 py-12 bg-white text-[#0b3130]">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 px-4 sm:px-6 md:px-8 lg:px-12 py-10 bg-white">
                 {/* 1 */}
-                <ScrollReveal delay={0.1} >
-                    <div className="w-72 h-72 rounded-full border border-gray-400 shadow-md flex flex-col justify-center items-center text-center p-6 transition-transform duration-300 hover:scale-105">
-                        <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold">
+                <ScrollReveal delay={0.1}>
+                    <div className="w-full max-w-[14rem] aspect-square rounded-full border border-gray-200 shadow-md flex flex-col justify-center items-center text-center p-4 mx-auto transition-all duration-300 hover:scale-105 hover:shadow-xl">
+                        <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold">
                             <ScrollCountUp end={1} duration={5} suffix="M" />
                         </h1>
-                        <p className="mt-4 text-base sm:text-lg font-medium w-40">Worldwide Business Grow</p>
+                        <p className="mt-3 text-sm sm:text-base font-medium max-w-[90%]">Worldwide Business Grow</p>
                     </div>
                 </ScrollReveal>
 
                 {/* 2 */}
-                <ScrollReveal delay={0.2} >
-                    <div className="w-72 h-72 rounded-full border border-gray-400 shadow-md flex flex-col justify-center items-center text-center p-6 transition-transform duration-300 hover:scale-105" >
-                        <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold">
+                <ScrollReveal delay={0.2}>
+                    <div className="w-full max-w-[14rem] aspect-square rounded-full border border-gray-200 shadow-md flex flex-col justify-center items-center text-center p-4 mx-auto transition-all duration-300 hover:scale-105 hover:shadow-xl">
+                        <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold">
                             <ScrollCountUp end={12} duration={5} suffix="K+" />
                         </h1>
-                        <p className="mt-4 text-base sm:text-lg font-medium w-40">Satisfied Clients</p>
+                        <p className="mt-3 text-sm sm:text-base font-medium max-w-[90%]">Satisfied Clients</p>
                     </div>
-
                 </ScrollReveal>
 
                 {/* 3 */}
                 <ScrollReveal delay={0.3}>
-                    <div className="w-72 h-72 rounded-full border border-gray-400 shadow-md flex flex-col justify-center items-center text-center p-6 transition-transform duration-300 hover:scale-105">
-                        <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold">
-                            <ScrollCountUp end={119} duration={5} suffix="M" />
+                    <div className="w-full max-w-[14rem] aspect-square rounded-full border border-gray-200 shadow-md flex flex-col justify-center items-center text-center p-4 mx-auto transition-all duration-300 hover:scale-105 hover:shadow-xl">
+                        <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold">
+                            <ScrollCountUp end={119} duration={5} />
                         </h1>
-                        <p className="mt-4 text-base sm:text-lg font-medium w-40">Countries Served</p>
+                        <p className="mt-3 text-sm sm:text-base font-medium max-w-[90%]">Countries Served</p>
                     </div>
                 </ScrollReveal>
 
                 {/* 4 */}
-                <ScrollReveal delay={0.4} >
-                    <div className="w-72 h-72 rounded-full border border-gray-400 shadow-md flex flex-col justify-center items-center text-center p-6 transition-transform duration-300 hover:scale-105">
-                        <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold">
+                <ScrollReveal delay={0.4}>
+                    <div className="w-full max-w-[14rem] aspect-square rounded-full border border-gray-200 shadow-md flex flex-col justify-center items-center text-center p-4 mx-auto transition-all duration-300 hover:scale-105 hover:shadow-xl">
+                        <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold">
                             <ScrollCountUp end={33} duration={5} />
                         </h1>
-                        <p className="mt-4 text-base sm:text-lg font-medium w-40">Award Winning Contests</p>
+                        <p className="mt-3 text-sm sm:text-base font-medium max-w-[90%]">Award Winning Contests</p>
                     </div>
                 </ScrollReveal>
             </div>
 
             <ScrollReveal className="fifth rounded-3xl w-[97%] max-w-[1300px] mx-auto px-6 sm:px-12 md:px-16 lg:px-20 py-16 bg-gradient-to-r from-[#578451] to-[#144443] min-h-screen">
-
-                {/* Header Section */}
-                <ScrollReveal className="flex flex-col md:flex-row justify-between h-1/2 mb-10 md:mb-16">
-                    {/* Left Text */}
-                    <div className="w-full md:w-1/2 mb-8 md:mb-0">
-                        <p className="flex items-center gap-3 text-white text-sm sm:text-base font-semibold uppercase tracking-wider">
-                            <span className="text-green-900"><FaArrowRight size={25} /></span>
-                            LATEST SERVICES
-                        </p>
-                        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold mt-6 md:mt-12 leading-tight text-white">
-                            Guidance for Personal and Professional Growth.
-                        </h1>
+                <ScrollReveal className=' text-white'>
+                    <div className='flex flex-col justify-center items-center'>
+                        <div className='flex items-center gap-3'>
+                            <span className='text-[#0a9695]'><IoDiamondSharp size={28} /></span>
+                            <h1 className=' bg-gradient-to-r from-[#0a9695] to-[#b8e96d]  bg-clip-text text-transparent text-2xl'>Our services</h1>
+                        </div>
+                        
+                        <h1 className='text-4xl bg-gradient-to-r from-[#b8e96d] to-[#0a9695]  bg-clip-text text-transparent mt-6 w-1/2'>For your very specific industry, we have <span className=''>highly-tailored IT solutions.</span></h1>
                     </div>
-
-                    {/* Right Number Section */}
-                    <div className="w-full md:w-1/2 flex flex-col justify-center items-center md:items-end">
-                        <h1 className="text-6xl sm:text-7xl md:text-8xl font-extrabold text-white leading-none">5K+</h1>
-                        <p className="text-xl sm:text-2xl text-white mt-2">Satisfied Clients</p>
+                    <div className='mt-25' >
+                        <AutoSlider slides={cards} />
                     </div>
                 </ScrollReveal>
-
-                {/* Services Grid */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 sm:gap-8">
-
-                    <ScrollReveal delay={0.1}>
-                        <div className="group bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-[8px] rounded-3xl px-6 py-6 text-white border border-white/10 shadow-[0_4px_30px_rgba(0,0,0,0.1)] transition-transform duration-300 hover:scale-[1.015] hover:shadow-[0_0_25px_rgba(0,255,200,0.15)] cursor-pointer h-full flex flex-col">
-                            <div className="mb-4"><FaNfcDirectional size={50} /></div>
-                            <h1 className="text-2xl font-semibold mb-3">Business Consulting</h1>
-                            <p className="text-gray-300 flex-grow">
-                                We promise cost-effective business consulting solutions designed to help you lower expenses and boost profits.
-                            </p>
-                            <div className="mt-6 flex justify-start">
-                                <span className="inline-block rotate-[-35deg] transition-all duration-300 group-hover:rotate-0 group-hover:translate-x-1">
-                                    <FaArrowRightLong size={30} />
-                                </span>
-                            </div>
-                        </div>
-                    </ScrollReveal>
-
-                    <ScrollReveal delay={0.2}>
-                        <div className="group bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-[8px] rounded-3xl px-6 py-6 text-white border border-white/10 shadow-[0_4px_30px_rgba(0,0,0,0.1)] transition-transform duration-300 hover:scale-[1.015] hover:shadow-[0_0_25px_rgba(0,255,200,0.15)] cursor-pointer h-full flex flex-col">
-                            <div className="mb-4"><FaNfcDirectional size={50} /></div>
-                            <h1 className="text-2xl font-semibold mb-3">Business Consulting</h1>
-                            <p className="text-gray-300 flex-grow">
-                                We promise cost-effective business consulting solutions designed to help you lower expenses and boost profits.
-                            </p>
-                            <div className="mt-6 flex justify-start">
-                                <span className="inline-block rotate-[-35deg] transition-all duration-300 group-hover:rotate-0 group-hover:translate-x-1">
-                                    <FaArrowRightLong size={30} />
-                                </span>
-                            </div>
-                        </div>
-                    </ScrollReveal>
-
-                    <ScrollReveal delay={0.3}>
-                        <div className="group bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-[8px] rounded-3xl px-6 py-6 text-white border border-white/10 shadow-[0_4px_30px_rgba(0,0,0,0.1)] transition-transform duration-300 hover:scale-[1.015] hover:shadow-[0_0_25px_rgba(0,255,200,0.15)] cursor-pointer h-full flex flex-col">
-                            <div className="mb-4"><FaNfcDirectional size={50} /></div>
-                            <h1 className="text-2xl font-semibold mb-3">Business Consulting</h1>
-                            <p className="text-gray-300 flex-grow">
-                                We promise cost-effective business consulting solutions designed to help you lower expenses and boost profits.
-                            </p>
-                            <div className="mt-6 flex justify-start">
-                                <span className="inline-block rotate-[-35deg] transition-all duration-300 group-hover:rotate-0 group-hover:translate-x-1">
-                                    <FaArrowRightLong size={30} />
-                                </span>
-                            </div>
-                        </div>
-                    </ScrollReveal>
-
-                    <ScrollReveal delay={0.4}>
-                        <div className="group bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-[8px] rounded-3xl px-6 py-6 text-white border border-white/10 shadow-[0_4px_30px_rgba(0,0,0,0.1)] transition-transform duration-300 hover:scale-[1.015] hover:shadow-[0_0_25px_rgba(0,255,200,0.15)] cursor-pointer h-full flex flex-col">
-                            <div className="mb-4"><FaNfcDirectional size={50} /></div>
-                            <h1 className="text-2xl font-semibold mb-3">Business Consulting</h1>
-                            <p className="text-gray-300 flex-grow">
-                                We promise cost-effective business consulting solutions designed to help you lower expenses and boost profits.
-                            </p>
-                            <div className="mt-6 flex justify-start">
-                                <span className="inline-block rotate-[-35deg] transition-all duration-300 group-hover:rotate-0 group-hover:translate-x-1">
-                                    <FaArrowRightLong size={30} />
-                                </span>
-                            </div>
-                        </div>
-                    </ScrollReveal>
-
-                </div>
             </ScrollReveal>
-
-            <div className=' h-[60vh] py-10 px-4 w-[97%] mx-auto'>
-                <AutoSlider slides={cards} />
+            <div className="sixth py-3  w-[97%] mx-auto mt-0">
+                <ServiceMarquee />
             </div>
+
+
         </div>
     )
 }

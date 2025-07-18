@@ -2,7 +2,7 @@
 @import "tailwindcss";
 
 ::selection{
-    background-color: rgba(204, 210, 32, 0.225);
+    background-color: #ffe4b5;
 }
 *{
     /* font-family: poppins; */
