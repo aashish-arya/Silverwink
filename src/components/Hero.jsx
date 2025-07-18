@@ -5,9 +5,11 @@ import { Typewriter } from 'react-simple-typewriter';
 import { motion } from 'framer-motion'
 import CountUp from 'react-countup';
 
+
 //components 
 import ScrollCountUp from './ScrollCountup';
 import ScrollReveal from './Scrollreveal';
+import AutoSlider from './AutoSlider';
 
 // React icons
 import { BsLightningChargeFill } from "react-icons/bs";
@@ -44,13 +46,40 @@ const Hero = () => {
         return () => clearTimeout(timer);
     }, []);
 
+
+    const cards = [
+        {
+            title: "Technology IT",
+            image: "https://html.kodesolution.com/2025/finclix-html/images/home-1/project/project-01.jpg",
+        },
+        {
+            title: "Orion Finance",
+            image: "https://html.kodesolution.com/2025/finclix-html/images/home-1/project/project-02.jpg",
+        },
+        {
+            title: "Business firm",
+            image: "https://html.kodesolution.com/2025/finclix-html/images/home-1/project/project-03.jpg",
+        },
+        {
+            title: "Additional Data",
+            image: "https://html.kodesolution.com/2025/finclix-html/images/home-1/project/project-02.jpg",
+        },
+    ];
+
     return (
+
         <div>
-            {/* Hero Section */}
-            <div className="w-full min-h-[90vh] md:min-h-screen relative bg-cover bg-center" style={{ backgroundImage: `url(${heroimg})` }}>
+            <div
+                className="first w-full min-h-screen relative bg-cover bg-center"
+                style={{ backgroundImage: `url(${heroimg})` }}
+            >
+                {/* Dark Gradient Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-r from-black/80 to-transparent"></div>
-                <div className="relative z-10 flex flex-col justify-center items-center text-white p-4 sm:p-6 md:p-8 lg:p-10">
-                    <h1 className="text-3xl sm:text-4xl md:text-5xl text-center font-bold leading-normal">
+
+                {/* Main Content */}
+                <div className="relative z-10 flex flex-col justify-center items-center text-white px-4 py-16 sm:py-20 lg:py-32">
+                    {/* Heading */}
+                    <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-center font-bold leading-snug sm:leading-tight">
                         <Typewriter
                             words={['WELCOME TO SILVERWINK IT SOLUTIONS']}
                             cursor
@@ -60,244 +89,317 @@ const Hero = () => {
                             delaySpeed={1000}
                         />
                     </h1>
+
+                    {/* Box Reveal on Scroll */}
                     {showBox && (
-                        <motion.div
-                            initial={{ opacity: 0, y: 50 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.7, ease: 'easeOut' }}
-                            className="bg-white/10 backdrop-blur-md w-full lg:w-3/4 xl:w-1/2 mt-6 sm:mt-8 md:mt-10 space-y-3 sm:space-y-4 md:space-y-5 px-4 sm:px-6 md:px-8 py-6 sm:py-8 md:py-10 rounded-2xl text-center text-white"
-                        >
-                            <div className='w-full sm:w-fit mx-auto text-white transition-all duration-200 cursor-pointer hover:scale-[1.02] hover:shadow-lg shadow-stone-700 hover:border-white px-3 sm:px-4 py-1 sm:py-2 rounded-full border border-gray-500 flex justify-center items-center'>
-                                <span className='p-2 sm:p-3 rounded-full border bg-gradient-to-r from-[#0f2027] to-[#2c5364] text-green-400'>
-                                    <BsLightningChargeFill size={12} className="sm:w-4 sm:h-4" />
+                        <ScrollReveal className="bg-white/10 backdrop-blur-md w-full max-w-4xl mt-10 space-y-5 px-6 sm:px-10 py-10 rounded-2xl text-center text-white">
+
+                            {/* Highlight Box */}
+                            {/* Highlight Box */}
+                            <div className="w-fit mx-auto text-white transition-all duration-200 cursor-pointer hover:scale-101 hover:shadow-2xl shadow-stone-700 hover:border-white px-3 sm:px-6 py-2 rounded-full border border-gray-500 flex items-center gap-2 sm:gap-4">
+                                {/* Icon Box */}
+                                <span className="p-2 sm:px-4 sm:py-3 rounded-full border bg-gradient-to-r from-[#0f2027] to-[#2c5364] text-green-400 flex items-center justify-center">
+                                    <BsLightningChargeFill size={16} />
                                 </span>
-                                <span className='text-lg sm:text-xl md:text-2xl px-2'>Reliable And Fast Solutions</span>
+
+                                {/* Text */}
+                                <span className="text-base sm:text-xl font-medium whitespace-nowrap">
+                                    Reliable And Fast Solutions
+                                </span>
                             </div>
-                            <div className='text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-center mt-2 sm:mt-3 px-2 sm:px-3 md:px-4'>
+
+
+                            {/* Tagline */}
+                            <div className="text-2xl sm:text-3xl lg:text-5xl text-center mt-3 px-4">
                                 Empower your Business with Our Solutions.
                             </div>
-                            <div className='text-base sm:text-lg md:text-xl text-center mt-3 sm:mt-4 px-2 sm:px-3'>
+
+                            {/* Description */}
+                            <div className="text-base sm:text-lg mt-4 px-4">
                                 Everyone with high and useful reward for his/her trading, purchase and investment. Our goal is to make the
                             </div>
-                            <div className='border cursor-pointer border-gray-600 hover:shadow-lg shadow-stone-700 hover:bg-[#167e4a] hover:border-white bg-[#132730] hover:scale-[1.03] duration-200 group rounded-full flex justify-center items-center gap-2 sm:gap-3 mt-6 sm:mt-8 w-full sm:w-fit mx-auto px-3 py-2 sm:px-4 sm:py-2'>
-                                <span className='text-base sm:text-lg md:text-xl'>Lets Talk With Us</span>
-                                <span className='border border-gray-600 bg-[#167e4a] group-hover:border-white group-hover:bg-[#132730] group-hover:rotate-180 transition-all duration-300 rounded-full w-7 h-7 sm:w-8 sm:h-8 flex justify-center items-center'>
-                                    <FaArrowLeftLong size={16} className="sm:w-5 sm:h-5" />
+
+                            {/* Button */}
+                            <div className="border border-gray-600 bg-[#132730] hover:shadow-2xl hover:bg-[#167e4a] hover:border-white hover:scale-105 duration-200 group rounded-full flex items-center justify-center gap-2 sm:gap-4 mt-10 w-fit mx-auto px-4 sm:px-6 py-2 sm:py-3">
+
+                                {/* Button Text */}
+                                <span className="text-base sm:text-xl md:text-2xl font-semibold whitespace-nowrap">
+                                    Let’s Talk With Us
+                                </span>
+
+                                {/* Arrow Icon Box */}
+                                <span className="rotate-135 border border-gray-600 bg-[#167e4a] group-hover:border-white group-hover:bg-[#132730] group-hover:rotate-180 transition-all duration-300 rounded-full w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center">
+                                    <FaArrowLeftLong size={20} className="sm:size-[24px]" />
                                 </span>
                             </div>
-                        </motion.div>
+
+                        </ScrollReveal>
                     )}
                 </div>
             </div>
 
-            {/* Services Section */}
-            <div className='second px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 flex flex-col lg:flex-row gap-4 sm:gap-5 md:gap-6 min-h-80 py-8 sm:py-10'>
-                <ScrollReveal delay={0.2} className='flex-1 bg-[#e4f4f2] p-4 sm:p-5 md:p-6 rounded-xl h-auto lg:h-96'>
-                    <div className='text-2xl sm:text-3xl md:text-4xl lg:text-5xl px-4 sm:px-5 md:px-6 text-left'>Providing the Best Business Solutions</div>
-                    <div className='relative flex mt-6 sm:mt-8 md:mt-10 h-12'>
-                        <img className='absolute left-0 sm:left-4 w-8 h-8 sm:w-10 sm:h-10' src={client1} alt="" />
-                        <img className='absolute left-8 sm:left-12 w-8 h-8 sm:w-10 sm:h-10' src={client2} alt="" />
-                        <img className='absolute left-16 sm:left-20 w-8 h-8 sm:w-10 sm:h-10' src={client3} alt="" />
-                        <img className='absolute left-24 sm:left-28 w-8 h-8 sm:w-10 sm:h-10' src={client4} alt="" />
+            <div className="second px-4 sm:px-6 md:px-8 lg:px-12 flex flex-col lg:flex-row gap-6 py-10">
+
+                {/* Left Card */}
+                <ScrollReveal delay={0.2} className="flex-1 h-96 bg-[#e4f4f2] py-4 px-6 rounded-xl">
+                    <div className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-left">
+                        Providing the Best Business Solutions
                     </div>
-                    <div className='mt-20 sm:mt-24 px-4 sm:px-5 flex gap-2 justify-start items-center'>
-                        {[...Array(5)].map((_, i) => (
-                            <MdOutlineStar key={i} size={16} className="sm:w-5 sm:h-5" color='gold' />
-                        ))}
-                        <span className='font-bold text-sm sm:text-base'>(4.9)</span>
+
+                    {/* Clients Image Row */}
+                    <div className="flex mt-6 sm:mt-8 xl:mt-16 gap-3 sm:gap-4">
+                        <img className="w-10 sm:w-12 md:w-14 rounded-full" src={client1} alt="" />
+                        <img className="w-10 sm:w-12 md:w-14 rounded-full" src={client2} alt="" />
+                        <img className="w-10 sm:w-12 md:w-14 rounded-full" src={client3} alt="" />
+                        <img className="w-10 sm:w-12 md:w-14 rounded-full" src={client4} alt="" />
+                    </div>
+
+                    {/* Star Rating */}
+                    <div className="mt-12 xl:mt-16 flex gap-1 items-center">
+                        <MdOutlineStar size={20} color="gold" />
+                        <MdOutlineStar size={20} color="gold" />
+                        <MdOutlineStar size={20} color="gold" />
+                        <MdOutlineStar size={20} color="gold" />
+                        <MdOutlineStar size={20} color="gold" />
+                        <span className="font-bold ml-1 text-sm sm:text-base">(4.9)</span>
                     </div>
                 </ScrollReveal>
 
-                <ScrollReveal delay={0.5} className='flex-1 h-80 sm:h-96'>
-                    <div className='bg-black h-1/2 overflow-hidden'>
-                        <img className='object-cover w-full h-full' src={meeting1} alt="" />
+                {/* Middle Card */}
+                <ScrollReveal delay={0.5} className="flex-1 h-96 flex flex-col overflow-hidden rounded-xl">
+                    <div className="h-1/2 bg-black overflow-hidden">
+                        <img className="w-full h-full object-cover xl:object-top-right" src={meeting1} alt="" />
                     </div>
-                    <div className='bg-[#144443] h-1/2 text-white p-4 sm:p-5 md:p-6'>
-                        <h1 className='text-xl sm:text-2xl md:text-3xl font-semibold'>Consultancy</h1>
-                        <p className='text-base sm:text-lg md:text-xl mt-2 sm:mt-3'>everyone with high and useful reward for his/her trading,</p>
+                    <div className="h-1/2 bg-[#144443] text-white px-4 sm:px-6 md:px-8 lg:px-10">
+                        <h1 className="text-2xl sm:text-3xl font-semibold pt-4">Consultancy</h1>
+                        <p className="text-base sm:text-lg py-3">
+                            everyone with high and useful reward for his/her trading,
+                        </p>
                     </div>
                 </ScrollReveal>
 
-                <ScrollReveal delay={0.8} className='flex-1 h-80 sm:h-96'>
-                    <div className='bg-[#144443] h-1/2 text-white p-4 sm:p-5 md:p-6'>
-                        <h1 className='text-xl sm:text-2xl md:text-3xl font-semibold'>Business Mentor</h1>
-                        <p className='text-base sm:text-lg md:text-xl mt-2 sm:mt-3'>everyone with high and useful reward for his/her trading,</p>
+                {/* Right Card */}
+                <ScrollReveal delay={0.8} className="flex-1 h-96 flex flex-col overflow-hidden rounded-xl">
+                    <div className="h-1/2 bg-[#144443] text-white px-4 sm:px-6 md:px-8 lg:px-10 py-4">
+                        <h1 className="text-2xl sm:text-3xl font-semibold">Business Mentor</h1>
+                        <p className="text-base sm:text-lg mt-2 sm:mt-4">
+                            everyone with high and useful reward for his/her trading,
+                        </p>
                     </div>
-                    <div className='h-1/2 overflow-hidden'>
-                        <img className='object-cover w-full h-full' src={meeting2} alt="" />
+                    <div className="h-1/2 overflow-hidden">
+                        <img className="w-full h-full object-cover xl:object-bottom-left" src={meeting2} alt="" />
                     </div>
                 </ScrollReveal>
+
             </div>
 
-            {/* About Section */}
-            <div className='third px-4 sm:px-6 md:px-8 lg:px-10 py-8 sm:py-10 md:py-12 flex flex-col md:flex-row gap-4 sm:gap-5 md:gap-6 items-center min-h-auto md:min-h-[80vh]'>
-                <ScrollReveal direction='right' className="w-full md:w-1/2">
-                    <img className='w-full h-auto rounded-xl' src={aboutimg} alt="" />
+            <div className="third px-6 md:px-12 lg:px-16 xl:px-20 py-12 flex flex-col justify-between md:flex-row gap-6 items-center min-h-[105vh] max-w-[1300px] mx-auto">
+
+                {/* Left Image */}
+                <ScrollReveal direction="right" className="flex-1 max-w-full">
+                    <img src={aboutimg} alt="About" className="w-full h-auto object-cover rounded-xl" />
                 </ScrollReveal>
 
-                <ScrollReveal direction='left' className='w-full md:w-1/2 space-y-3 sm:space-y-4 px-4 sm:px-5 md:px-6'>
-                    <div className='flex justify-center md:justify-start gap-2 sm:gap-3 items-center'>
-                        <IoDiamondSharp size={20} className="text-[#113c3d]" />
-                        <span className='text-gray-500 text-sm sm:text-base'>Who We Are</span>
-                    </div>
-                    <h1 className='text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-[#0b3130] font-semibold text-left mt-4 sm:mt-5'>Increase your money systematically</h1>
+                {/* Right Content */}
+                <ScrollReveal direction="left" className="flex-1 space-y-6 px-4 sm:px-6 md:px-10 min-h-[90vh] flex flex-col items-center md:items-start text-center md:text-left">
 
-                    <div className='flex flex-col sm:flex-row justify-center items-center mt-4 sm:mt-5 py-2 gap-3 sm:gap-4'>
-                        <div className='hover:scale-105 cursor-pointer transition-all duration-200 bg-gradient-to-r from-[#b8e96d] to-[#0a9695] w-12 h-12 sm:w-14 sm:h-14 flex justify-center items-center rounded-full'>
-                            <RiBriefcase2Line size={24} className="text-white" />
-                        </div>
-                        <p className='text-lg sm:text-xl text-[#0b3130] underline text-center sm:text-left'>
+                    {/* Who We Are */}
+                    <ScrollReveal direction='left' delay={0.1} className="flex justify-center lg:justify-start items-center gap-3 mt-10 md:mt-0">
+                        <span className="text-[#113c3d]"><IoDiamondSharp size={28} /></span>
+                        <span className="text-gray-500 text-sm sm:text-base uppercase tracking-wide">Who We Are</span>
+                    </ScrollReveal>
+
+                    {/* Heading */}
+                    <ScrollReveal direction='left' delay={0.2} className="text-4xl sm:text-5xl md:text-6xl font-semibold text-[#0b3130] leading-tight">
+                        Increase your money systematically
+                    </ScrollReveal>
+
+                    {/* Icon + Text Row */}
+                    <ScrollReveal direction='left' delay={0.3} className="flex flex-col sm:flex-row justify-center md:justify-start items-center gap-4 mt-6 py-2">
+                        <span className="hover:scale-110 transition-transform duration-200 cursor-pointer bg-gradient-to-r from-[#b8e96d] to-[#0a9695] w-28 h-16 flex justify-center items-center rounded-full">
+                            <RiBriefcase2Line size={30} className="text-white" />
+                        </span>
+                        <p className="text-xl underline text-[#0b3130] max-w-xl px-4 sm:px-0">
                             Everyone with high and useful reward for his/her trading, purchase and investment
                         </p>
+                    </ScrollReveal>
+
+                    {/* Description Paragraph */}
+                    <ScrollReveal delay={0.4} direction='left' className="text-gray-500 mt-8 max-w-xl leading-relaxed">
+                        Everyone with high and useful reward for his/her trading, purchase and investment. Our goal is to make the...
+                    </ScrollReveal>
+
+                    {/* Points + 25+ Box container */}
+                    <div className="flex flex-col sm:flex-row justify-center md:justify-start items-center gap-8 mt-12 w-full">
+
+                        {/* Points List */}
+                        {/* Points List */}
+                        <ScrollReveal
+                            delay={0.5}
+                            direction='left'
+                            className="w-full sm:w-72 space-y-3 text-[#0b3130] text-center sm:text-left mx-auto"
+                        >
+                            <p className="text-lg flex justify-center sm:justify-start items-center gap-3">
+                                <FaCheckCircle className="text-[#0a9695]" /> Protecting your company
+                            </p>
+                            <p className="text-lg flex justify-center sm:justify-start items-center gap-3">
+                                <FaCheckCircle className="text-[#0a9695]" /> We offer you solutions
+                            </p>
+                            <p className="text-lg flex justify-center sm:justify-start items-center gap-3">
+                                <FaCheckCircle className="text-[#0a9695]" /> We take care of you
+                            </p>
+                            <p className="text-lg flex justify-center sm:justify-start items-center gap-3">
+                                <FaCheckCircle className="text-[#0a9695]" /> Everyone with high
+                            </p>
+                        </ScrollReveal>
+
+
+                        {/* 25+ Years Box */}
+                        <ScrollReveal delay={0.6} direction="left" style={{ minWidth: '180px', maxWidth: '180px' }}>
+                            <div className="bg-gradient-to-r from-[#b8e96d] to-[#0a9695] text-white px-14 py-6 rounded-2xl cursor-pointer hover:scale-110 transition-transform duration-300">
+                                <h1 className="text-5xl font-bold text-center">25 +</h1>
+                                <div className="text-xl w-full text-center">Years of Experience</div>
+                            </div>
+                        </ScrollReveal>
                     </div>
 
-                    <p className='text-gray-500 text-base sm:text-lg mt-4 sm:mt-5'>
-                        everyone with high and useful reward for his/her trading, purchase and investment. Our goal is to make the
-                    </p>
-
-                    <div className='flex flex-col sm:flex-row justify-between items-center mt-6 sm:mt-8 gap-4 sm:gap-6'>
-                        <div className='w-full sm:w-1/2'>
-                            <p className='text-base sm:text-lg flex items-center gap-2 sm:gap-3 mb-2'><FaCheckCircle className="text-green-500" />Protecting your company</p>
-                            <p className='text-base sm:text-lg flex items-center gap-2 sm:gap-3 mb-2'><FaCheckCircle className="text-green-500" />We offer you solutions</p>
-                            <p className='text-base sm:text-lg flex items-center gap-2 sm:gap-3 mb-2'><FaCheckCircle className="text-green-500" />we take care of you</p>
-                            <p className='text-base sm:text-lg flex items-center gap-2 sm:gap-3'><FaCheckCircle className="text-green-500" />everyone with high</p>
-                        </div>
-                        <div className='bg-gradient-to-r hover:scale-105 cursor-pointer duration-300 from-[#b8e96d] to-[#0a9695] text-white px-6 sm:px-8 py-4 sm:py-5 rounded-2xl w-full sm:w-auto mt-4 sm:mt-0'>
-                            <h1 className='text-3xl sm:text-4xl md:text-5xl font-bold'>25 +</h1>
-                            <div className='text-lg sm:text-xl'>Years of Experience</div>
-                        </div>
-                    </div>
                 </ScrollReveal>
             </div>
 
-            {/* Stats Section */}
-            <div className="fourth flex flex-col sm:flex-row flex-wrap justify-center items-center gap-4 sm:gap-6 md:gap-8 px-4 sm:px-6 md:px-8 py-8 sm:py-10 md:py-12 bg-white text-[#0b3130]">
-                <ScrollReveal >
-                    <div className="w-64 h-64 sm:w-72 sm:h-72 rounded-full border border-gray-300 shadow-sm flex flex-col justify-center items-center text-center p-4 sm:p-5 md:p-6 transition-transform duration-300 hover:scale-[1.03]">
-                        <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold">
+            <div className="fourth flex flex-wrap justify-center items-center gap-8 px-4 sm:px-8 md:px-16 py-12 bg-white text-[#0b3130]">
+                {/* 1 */}
+                <ScrollReveal delay={0.1} >
+                    <div className="w-72 h-72 rounded-full border border-gray-400 shadow-md flex flex-col justify-center items-center text-center p-6 transition-transform duration-300 hover:scale-105">
+                        <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold">
                             <ScrollCountUp end={1} duration={5} suffix="M" />
                         </h1>
-                        <p className="mt-3 sm:mt-4 text-sm sm:text-base font-medium">Worldwide Business Grow</p>
+                        <p className="mt-4 text-base sm:text-lg font-medium w-40">Worldwide Business Grow</p>
                     </div>
                 </ScrollReveal>
 
-                <ScrollReveal >
-                    <div className="w-64 h-64 sm:w-72 sm:h-72 rounded-full border border-gray-300 shadow-sm flex flex-col justify-center items-center text-center p-4 sm:p-5 md:p-6 transition-transform duration-300 hover:scale-[1.03]">
-                        <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold">
+                {/* 2 */}
+                <ScrollReveal delay={0.2} >
+                    <div className="w-72 h-72 rounded-full border border-gray-400 shadow-md flex flex-col justify-center items-center text-center p-6 transition-transform duration-300 hover:scale-105" >
+                        <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold">
                             <ScrollCountUp end={12} duration={5} suffix="K+" />
                         </h1>
-                        <p className="mt-3 sm:mt-4 text-sm sm:text-base font-medium">Satisfied Clients</p>
+                        <p className="mt-4 text-base sm:text-lg font-medium w-40">Satisfied Clients</p>
                     </div>
+
                 </ScrollReveal>
 
-                <ScrollReveal >
-                    <div className="w-64 h-64 sm:w-72 sm:h-72 rounded-full border border-gray-300 shadow-sm flex flex-col justify-center items-center text-center p-4 sm:p-5 md:p-6 transition-transform duration-300 hover:scale-[1.03]">
-                        <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold">
+                {/* 3 */}
+                <ScrollReveal delay={0.3}>
+                    <div className="w-72 h-72 rounded-full border border-gray-400 shadow-md flex flex-col justify-center items-center text-center p-6 transition-transform duration-300 hover:scale-105">
+                        <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold">
                             <ScrollCountUp end={119} duration={5} suffix="M" />
                         </h1>
-                        <p className="mt-3 sm:mt-4 text-sm sm:text-base font-medium">Countries Served</p>
+                        <p className="mt-4 text-base sm:text-lg font-medium w-40">Countries Served</p>
                     </div>
                 </ScrollReveal>
 
-                <ScrollReveal >
-                    <div className="w-64 h-64 sm:w-72 sm:h-72 rounded-full border border-gray-300 shadow-sm flex flex-col justify-center items-center text-center p-4 sm:p-5 md:p-6 transition-transform duration-300 hover:scale-[1.03]">
-                        <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold">
+                {/* 4 */}
+                <ScrollReveal delay={0.8} >
+                    <div className="w-72 h-72 rounded-full border border-gray-400 shadow-md flex flex-col justify-center items-center text-center p-6 transition-transform duration-300 hover:scale-105">
+                        <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold">
                             <ScrollCountUp end={33} duration={5} />
                         </h1>
-                        <p className="mt-3 sm:mt-4 text-sm sm:text-base font-medium">Award Winning Contests</p>
+                        <p className="mt-4 text-base sm:text-lg font-medium w-40">Award Winning Contests</p>
                     </div>
                 </ScrollReveal>
             </div>
 
-            {/* Services Section */}
-            <ScrollReveal className="fifth rounded-3xl w-[95%] max-w-[1920px] px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 py-8 sm:py-10 md:py-12 lg:py-14 xl:py-16 mx-auto bg-gradient-to-r from-[#578451] to-[#144443] min-h-screen">
-                <div className="flex flex-col lg:flex-row justify-between gap-6 sm:gap-8 h-auto mb-6 sm:mb-8 md:mb-10 lg:mb-12">
-                    <div className="w-full lg:w-1/2 flex flex-col justify-center">
-                        <p className="flex justify-start gap-2 sm:gap-3 text-white items-center mb-3 sm:mb-4 md:mb-5">
-                            <FaArrowRight size={20} className="text-green-300" />
-                            <span className="text-xs sm:text-sm md:text-base font-medium tracking-wider">LATEST SERVICES</span>
+            <ScrollReveal className="fifth rounded-3xl w-[97%] max-w-[1300px] mx-auto px-6 sm:px-12 md:px-16 lg:px-20 py-16 bg-gradient-to-r from-[#578451] to-[#144443] min-h-screen">
+
+                {/* Header Section */}
+                <ScrollReveal className="flex flex-col md:flex-row justify-between h-1/2 mb-10 md:mb-16">
+                    {/* Left Text */}
+                    <div className="w-full md:w-1/2 mb-8 md:mb-0">
+                        <p className="flex items-center gap-3 text-white text-sm sm:text-base font-semibold uppercase tracking-wider">
+                            <span className="text-green-900"><FaArrowRight size={25} /></span>
+                            LATEST SERVICES
                         </p>
-                        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-white leading-tight">
+                        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold mt-6 md:mt-12 leading-tight text-white">
                             Guidance for Personal and Professional Growth.
                         </h1>
                     </div>
 
-                    <div className="w-full lg:w-1/2 flex flex-col justify-center items-center lg:items-end mt-6 sm:mt-8 lg:mt-0">
-                        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white">5K+</h1>
-                        <p className="text-lg sm:text-xl text-white/90 mt-1 sm:mt-2">Satisfied Clients</p>
+                    {/* Right Number Section */}
+                    <div className="w-full md:w-1/2 flex flex-col justify-center items-center md:items-end">
+                        <h1 className="text-6xl sm:text-7xl md:text-8xl font-extrabold text-white leading-none">5K+</h1>
+                        <p className="text-xl sm:text-2xl text-white mt-2">Satisfied Clients</p>
                     </div>
-                </div>
+                </ScrollReveal>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-5 w-full">
-                    <ScrollReveal>
-                        <div className="h-full bg-black/80 hover:bg-black/90 px-4 sm:px-5 py-5 sm:py-6 rounded-3xl space-y-3 transition-all duration-300 text-white shadow-md hover:shadow-lg hover:-translate-y-1 border border-white/10 flex flex-col">
-                            <div className="text-blue-400">
-                                <FaNfcDirectional size={36} className="sm:w-10 sm:h-10" />
-                            </div>
-                            <h1 className="text-lg sm:text-xl font-bold">Business Consulting</h1>
-                            <p className="text-sm sm:text-base text-gray-300 leading-relaxed">
+                {/* Services Grid */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 sm:gap-8">
+
+                    <ScrollReveal delay={0.1}>
+                        <div className="group bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-[8px] rounded-3xl px-6 py-6 text-white border border-white/10 shadow-[0_4px_30px_rgba(0,0,0,0.1)] transition-transform duration-300 hover:scale-[1.015] hover:shadow-[0_0_25px_rgba(0,255,200,0.15)] cursor-pointer h-full flex flex-col">
+                            <div className="mb-4"><FaNfcDirectional size={50} /></div>
+                            <h1 className="text-2xl font-semibold mb-3">Business Consulting</h1>
+                            <p className="text-gray-300 flex-grow">
                                 We promise cost-effective business consulting solutions designed to help you lower expenses and boost profits.
                             </p>
-                            <div className="mt-auto pt-4 sm:pt-5 cursor-pointer group">
-                                <span className="inline-block transition-all duration-300 group-hover:rotate-0 group-hover:translate-x-1 -rotate-[35deg]">
-                                    <FaArrowRightLong size={20} className="text-blue-400" />
+                            <div className="mt-6 flex justify-start">
+                                <span className="inline-block rotate-[-35deg] transition-all duration-300 group-hover:rotate-0 group-hover:translate-x-1">
+                                    <FaArrowRightLong size={30} />
                                 </span>
                             </div>
                         </div>
                     </ScrollReveal>
 
-                    <ScrollReveal>
-                        <div className="h-full bg-black/80 hover:bg-black/90 px-4 sm:px-5 py-5 sm:py-6 rounded-3xl space-y-3 transition-all duration-300 text-white shadow-md hover:shadow-lg hover:-translate-y-1 border border-white/10 flex flex-col">
-                            <div className="text-green-400">
-                                <FaNfcDirectional size={36} className="sm:w-10 sm:h-10" />
-                            </div>
-                            <h1 className="text-lg sm:text-xl font-bold">Market Analysis</h1>
-                            <p className="text-sm sm:text-base text-gray-300 leading-relaxed">
-                                Comprehensive market research and competitive analysis to help you make informed business decisions.
+                    <ScrollReveal delay={0.2}>
+                        <div className="group bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-[8px] rounded-3xl px-6 py-6 text-white border border-white/10 shadow-[0_4px_30px_rgba(0,0,0,0.1)] transition-transform duration-300 hover:scale-[1.015] hover:shadow-[0_0_25px_rgba(0,255,200,0.15)] cursor-pointer h-full flex flex-col">
+                            <div className="mb-4"><FaNfcDirectional size={50} /></div>
+                            <h1 className="text-2xl font-semibold mb-3">Business Consulting</h1>
+                            <p className="text-gray-300 flex-grow">
+                                We promise cost-effective business consulting solutions designed to help you lower expenses and boost profits.
                             </p>
-                            <div className="mt-auto pt-4 sm:pt-5 cursor-pointer group">
-                                <span className="inline-block transition-all duration-300 group-hover:rotate-0 group-hover:translate-x-1 -rotate-[35deg]">
-                                    <FaArrowRightLong size={20} className="text-green-400" />
+                            <div className="mt-6 flex justify-start">
+                                <span className="inline-block rotate-[-35deg] transition-all duration-300 group-hover:rotate-0 group-hover:translate-x-1">
+                                    <FaArrowRightLong size={30} />
                                 </span>
                             </div>
                         </div>
                     </ScrollReveal>
 
-                    <ScrollReveal>
-                        <div className="h-full bg-black/80 hover:bg-black/90 px-4 sm:px-5 py-5 sm:py-6 rounded-3xl space-y-3 transition-all duration-300 text-white shadow-md hover:shadow-lg hover:-translate-y-1 border border-white/10 flex flex-col">
-                            <div className="text-purple-400">
-                                <FaNfcDirectional size={36} className="sm:w-10 sm:h-10" />
-                            </div>
-                            <h1 className="text-lg sm:text-xl font-bold">Financial Planning</h1>
-                            <p className="text-sm sm:text-base text-gray-300 leading-relaxed">
-                                Strategic financial planning services to optimize your investments and maximize returns.
+                    <ScrollReveal delay={0.3}>
+                        <div className="group bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-[8px] rounded-3xl px-6 py-6 text-white border border-white/10 shadow-[0_4px_30px_rgba(0,0,0,0.1)] transition-transform duration-300 hover:scale-[1.015] hover:shadow-[0_0_25px_rgba(0,255,200,0.15)] cursor-pointer h-full flex flex-col">
+                            <div className="mb-4"><FaNfcDirectional size={50} /></div>
+                            <h1 className="text-2xl font-semibold mb-3">Business Consulting</h1>
+                            <p className="text-gray-300 flex-grow">
+                                We promise cost-effective business consulting solutions designed to help you lower expenses and boost profits.
                             </p>
-                            <div className="mt-auto pt-4 sm:pt-5 cursor-pointer group">
-                                <span className="inline-block transition-all duration-300 group-hover:rotate-0 group-hover:translate-x-1 -rotate-[35deg]">
-                                    <FaArrowRightLong size={20} className="text-purple-400" />
+                            <div className="mt-6 flex justify-start">
+                                <span className="inline-block rotate-[-35deg] transition-all duration-300 group-hover:rotate-0 group-hover:translate-x-1">
+                                    <FaArrowRightLong size={30} />
                                 </span>
                             </div>
                         </div>
                     </ScrollReveal>
 
-                    <ScrollReveal>
-                        <div className="h-full bg-black/80 hover:bg-black/90 px-4 sm:px-5 py-5 sm:py-6 rounded-3xl space-y-3 transition-all duration-300 text-white shadow-md hover:shadow-lg hover:-translate-y-1 border border-white/10 flex flex-col">
-                            <div className="text-yellow-400">
-                                <FaNfcDirectional size={36} className="sm:w-10 sm:h-10" />
-                            </div>
-                            <h1 className="text-lg sm:text-xl font-bold">Digital Strategy</h1>
-                            <p className="text-sm sm:text-base text-gray-300 leading-relaxed">
-                                Innovative digital strategies to enhance your online presence and customer engagement.
+                    <ScrollReveal delay={0.4}>
+                        <div className="group bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-[8px] rounded-3xl px-6 py-6 text-white border border-white/10 shadow-[0_4px_30px_rgba(0,0,0,0.1)] transition-transform duration-300 hover:scale-[1.015] hover:shadow-[0_0_25px_rgba(0,255,200,0.15)] cursor-pointer h-full flex flex-col">
+                            <div className="mb-4"><FaNfcDirectional size={50} /></div>
+                            <h1 className="text-2xl font-semibold mb-3">Business Consulting</h1>
+                            <p className="text-gray-300 flex-grow">
+                                We promise cost-effective business consulting solutions designed to help you lower expenses and boost profits.
                             </p>
-                            <div className="mt-auto pt-4 sm:pt-5 cursor-pointer group">
-                                <span className="inline-block transition-all duration-300 group-hover:rotate-0 group-hover:translate-x-1 -rotate-[35deg]">
-                                    <FaArrowRightLong size={20} className="text-yellow-400" />
+                            <div className="mt-6 flex justify-start">
+                                <span className="inline-block rotate-[-35deg] transition-all duration-300 group-hover:rotate-0 group-hover:translate-x-1">
+                                    <FaArrowRightLong size={30} />
                                 </span>
                             </div>
                         </div>
                     </ScrollReveal>
+
                 </div>
             </ScrollReveal>
+
+            <div className=' h-[60vh] py-10 px-4 w-[97%] mx-auto'>
+                <AutoSlider slides={cards} />
+            </div>
         </div>
     )
 }
