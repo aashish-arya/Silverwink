@@ -331,7 +331,7 @@ const Hero = () => {
                 </ScrollReveal>
             </div>
 
-            <ScrollReveal className="fifth rounded-3xl w-[97%] max-w-[1300px] mx-auto px-6 sm:px-12 md:px-16 lg:px-20 py-16 bg-gradient-to-r from-[#578451] to-[#144443] min-h-screen">
+            <ScrollReveal className="fifth rounded-3xl w-[97%] max-w-[1300px] mx-auto px-6 sm:px-12 md:px-16 lg:px-20 md:py-16 py-8 bg-gradient-to-r from-[#578451] to-[#144443] min-h-screen">
                 <ScrollReveal className=' text-white'>
                     <div className='flex flex-col justify-center items-center'>
                         <div className='flex items-center gap-3'>
