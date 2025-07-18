@@ -299,7 +299,7 @@ const Hero = () => {
                 </ScrollReveal>
 
                 {/* 4 */}
-                <ScrollReveal delay={0.8} >
+                <ScrollReveal delay={0.4} >
                     <div className="w-72 h-72 rounded-full border border-gray-400 shadow-md flex flex-col justify-center items-center text-center p-6 transition-transform duration-300 hover:scale-105">
                         <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold">
                             <ScrollCountUp end={33} duration={5} />
