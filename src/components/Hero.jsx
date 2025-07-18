@@ -141,7 +141,7 @@ const Hero = () => {
             <div className="second px-4 sm:px-6 md:px-8 lg:px-12 flex flex-col lg:flex-row gap-6 py-10">
 
                 {/* Left Card */}
-                <ScrollReveal delay={0.2} className="flex-1 h-96 bg-[#e4f4f2] py-4 px-6 rounded-xl">
+                <ScrollReveal delay={0.1} className="flex-1 h-96 bg-[#e4f4f2] py-4 px-6 rounded-xl">
                     <div className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-left">
                         Providing the Best Business Solutions
                     </div>
@@ -166,7 +166,7 @@ const Hero = () => {
                 </ScrollReveal>
 
                 {/* Middle Card */}
-                <ScrollReveal delay={0.5} className="flex-1 h-96 flex flex-col overflow-hidden rounded-xl">
+                <ScrollReveal delay={0.2} className="flex-1 h-96 flex flex-col overflow-hidden rounded-xl">
                     <div className="h-1/2 bg-black overflow-hidden">
                         <img className="w-full h-full object-cover xl:object-top-right" src={meeting1} alt="" />
                     </div>
@@ -179,7 +179,7 @@ const Hero = () => {
                 </ScrollReveal>
 
                 {/* Right Card */}
-                <ScrollReveal delay={0.8} className="flex-1 h-96 flex flex-col overflow-hidden rounded-xl">
+                <ScrollReveal delay={0.3} className="flex-1 h-96 flex flex-col overflow-hidden rounded-xl">
                     <div className="h-1/2 bg-[#144443] text-white px-4 sm:px-6 md:px-8 lg:px-10 py-4">
                         <h1 className="text-2xl sm:text-3xl font-semibold">Business Mentor</h1>
                         <p className="text-base sm:text-lg mt-2 sm:mt-4">
@@ -196,7 +196,7 @@ const Hero = () => {
             <div className="third px-6 md:px-12 lg:px-16 xl:px-20 py-12 flex flex-col justify-between md:flex-row gap-6 items-center min-h-[105vh] max-w-[1300px] mx-auto">
 
                 {/* Left Image */}
-                <ScrollReveal direction="right" className="flex-1 max-w-full">
+                <ScrollReveal direction="right" delay={0.3} className="flex-1 max-w-full">
                     <img src={aboutimg} alt="About" className="w-full h-auto object-cover rounded-xl" />
                 </ScrollReveal>
 
@@ -210,12 +210,12 @@ const Hero = () => {
                     </ScrollReveal>
 
                     {/* Heading */}
-                    <ScrollReveal direction='left' delay={0.2} className="text-4xl sm:text-5xl md:text-6xl font-semibold text-[#0b3130] leading-tight">
+                    <ScrollReveal direction='left' delay={0.15} className="text-4xl sm:text-5xl md:text-6xl font-semibold text-[#0b3130] leading-tight">
                         Increase your money systematically
                     </ScrollReveal>
 
                     {/* Icon + Text Row */}
-                    <ScrollReveal direction='left' delay={0.3} className="flex flex-col sm:flex-row justify-center md:justify-start items-center gap-4 mt-6 py-2">
+                    <ScrollReveal direction='left' delay={0.2} className="flex flex-col sm:flex-row justify-center md:justify-start items-center gap-4 mt-6 py-2">
                         <span className="hover:scale-110 transition-transform duration-200 cursor-pointer bg-gradient-to-r from-[#b8e96d] to-[#0a9695] w-28 h-16 flex justify-center items-center rounded-full">
                             <RiBriefcase2Line size={30} className="text-white" />
                         </span>
@@ -225,7 +225,7 @@ const Hero = () => {
                     </ScrollReveal>
 
                     {/* Description Paragraph */}
-                    <ScrollReveal delay={0.4} direction='left' className="text-gray-500 mt-8 max-w-xl leading-relaxed">
+                    <ScrollReveal delay={0.25} direction='left' className="text-gray-500 mt-8 max-w-xl leading-relaxed">
                         Everyone with high and useful reward for his/her trading, purchase and investment. Our goal is to make the...
                     </ScrollReveal>
 
@@ -235,7 +235,7 @@ const Hero = () => {
                         {/* Points List */}
                         {/* Points List */}
                         <ScrollReveal
-                            delay={0.5}
+                            delay={0.3}
                             direction='left'
                             className="w-full sm:w-72 space-y-3 text-[#0b3130] text-center sm:text-left mx-auto"
                         >
@@ -255,7 +255,7 @@ const Hero = () => {
 
 
                         {/* 25+ Years Box */}
-                        <ScrollReveal delay={0.6} direction="left" style={{ minWidth: '180px', maxWidth: '180px' }}>
+                        <ScrollReveal delay={0.35} direction="left" style={{ minWidth: '180px', maxWidth: '180px' }}>
                             <div className="bg-gradient-to-r from-[#b8e96d] to-[#0a9695] text-white px-14 py-6 rounded-2xl cursor-pointer hover:scale-110 transition-transform duration-300">
                                 <h1 className="text-5xl font-bold text-center">25 +</h1>
                                 <div className="text-xl w-full text-center">Years of Experience</div>
