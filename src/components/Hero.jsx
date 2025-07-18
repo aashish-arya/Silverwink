@@ -216,7 +216,7 @@ const Hero = () => {
 
             </div>
 
-            <div className="third px-6 md:px-12 lg:px-16 xl:px-20 py-5 flex flex-col justify-between xl:justify-around md:flex-row gap-6 items-center  max-w-[2000px] bg-red-100 mx-auto">
+            <div className="third px-6 md:px-12 lg:px-16 xl:px-20 py-5 flex flex-col justify-between xl:justify-around md:flex-row gap-6 items-center  max-w-[2000px] mx-auto">
 
                 {/* Left Image */}
                 <ScrollReveal direction="right" delay={0.3} className="flex-1 max-w-full">
@@ -253,7 +253,7 @@ const Hero = () => {
                     </ScrollReveal>
 
                     {/* Points + 25+ Box container */}
-                    <div className="flex flex-col sm:flex-row justify-center md:justify-start items-start gap-8 mt-12 w-full">
+                    <div className="flex flex-col sm:flex-row justify-center md:justify-start items-center gap-8 mt-12 w-full">
 
                         {/* Points List */}
                         <ScrollReveal delay={0.3} direction='left' className="w-full sm:w-72 space-y-3 text-[#0b3130] text-center sm:text-left mx-auto">
