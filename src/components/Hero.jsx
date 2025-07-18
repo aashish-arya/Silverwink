@@ -216,7 +216,7 @@ const Hero = () => {
 
             </div>
 
-            <div className="third px-6 md:px-12 lg:px-16 xl:px-20 py-12 flex flex-col justify-between md:flex-row gap-6 items-center min-h-[105vh] max-w-[1300px] mx-auto">
+            <div className="third px-6 md:px-12 lg:px-16 xl:px-20 py-5 flex flex-col justify-between xl:justify-around md:flex-row gap-6 items-center  max-w-[2000px] bg-red-100 mx-auto">
 
                 {/* Left Image */}
                 <ScrollReveal direction="right" delay={0.3} className="flex-1 max-w-full">
@@ -253,15 +253,10 @@ const Hero = () => {
                     </ScrollReveal>
 
                     {/* Points + 25+ Box container */}
-                    <div className="flex flex-col sm:flex-row justify-center md:justify-start items-center gap-8 mt-12 w-full">
+                    <div className="flex flex-col sm:flex-row justify-center md:justify-start items-start gap-8 mt-12 w-full">
 
                         {/* Points List */}
-                        {/* Points List */}
-                        <ScrollReveal
-                            delay={0.3}
-                            direction='left'
-                            className="w-full sm:w-72 space-y-3 text-[#0b3130] text-center sm:text-left mx-auto"
-                        >
+                        <ScrollReveal delay={0.3} direction='left' className="w-full sm:w-72 space-y-3 text-[#0b3130] text-center sm:text-left mx-auto">
                             <p className="text-lg flex justify-center sm:justify-start items-center gap-3">
                                 <FaCheckCircle className="text-[#0a9695]" /> Protecting your company
                             </p>
@@ -289,10 +284,10 @@ const Hero = () => {
                 </ScrollReveal>
             </div>
 
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 px-4 sm:px-6 md:px-8 lg:px-12 py-10 bg-white">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 px-4 sm:px-6 md:px-8 lg:px-12 2xl:px-96 py-10 bg-white">
                 {/* 1 */}
                 <ScrollReveal delay={0.1}>
-                    <div className="w-full max-w-[14rem] aspect-square rounded-full border border-gray-200 shadow-md flex flex-col justify-center items-center text-center p-4 mx-auto transition-all duration-300 hover:scale-105 hover:shadow-xl">
+                    <div className="w-full max-w-[14rem] aspect-square rounded-full border border-gray-200 shadow-sm flex flex-col justify-center items-center text-center p-4 mx-auto transition-all duration-500 hover:cursor-pointer shadow-green-950 hover:scale-110 hover:shadow-2xl">
                         <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold">
                             <ScrollCountUp end={1} duration={5} suffix="M" />
                         </h1>
@@ -302,7 +297,7 @@ const Hero = () => {
 
                 {/* 2 */}
                 <ScrollReveal delay={0.2}>
-                    <div className="w-full max-w-[14rem] aspect-square rounded-full border border-gray-200 shadow-md flex flex-col justify-center items-center text-center p-4 mx-auto transition-all duration-300 hover:scale-105 hover:shadow-xl">
+                    <div className="w-full max-w-[14rem] aspect-square rounded-full border border-gray-200 shadow-sm flex flex-col justify-center items-center text-center p-4 mx-auto transition-all duration-500 hover:cursor-pointer shadow-green-950 hover:scale-110 hover:shadow-2xl">
                         <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold">
                             <ScrollCountUp end={12} duration={5} suffix="K+" />
                         </h1>
@@ -312,7 +307,7 @@ const Hero = () => {
 
                 {/* 3 */}
                 <ScrollReveal delay={0.3}>
-                    <div className="w-full max-w-[14rem] aspect-square rounded-full border border-gray-200 shadow-md flex flex-col justify-center items-center text-center p-4 mx-auto transition-all duration-300 hover:scale-105 hover:shadow-xl">
+                    <div className="w-full max-w-[14rem] aspect-square rounded-full border border-gray-200 shadow-sm flex flex-col justify-center items-center text-center p-4 mx-auto transition-all duration-500 hover:cursor-pointer shadow-green-950 hover:scale-110 hover:shadow-2xl">
                         <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold">
                             <ScrollCountUp end={119} duration={5} />
                         </h1>
@@ -322,7 +317,7 @@ const Hero = () => {
 
                 {/* 4 */}
                 <ScrollReveal delay={0.4}>
-                    <div className="w-full max-w-[14rem] aspect-square rounded-full border border-gray-200 shadow-md flex flex-col justify-center items-center text-center p-4 mx-auto transition-all duration-300 hover:scale-105 hover:shadow-xl">
+                    <div className="w-full max-w-[14rem] aspect-square rounded-full border border-gray-200 shadow-sm flex flex-col justify-center items-center text-center p-4 mx-auto transition-all duration-500 hover:cursor-pointer shadow-green-950 hover:scale-110 hover:shadow-2xl">
                         <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold">
                             <ScrollCountUp end={33} duration={5} />
                         </h1>
@@ -331,14 +326,14 @@ const Hero = () => {
                 </ScrollReveal>
             </div>
 
-            <ScrollReveal className="fifth rounded-3xl w-[97%] max-w-[1300px] mx-auto px-6 sm:px-12 md:px-16 lg:px-20 md:py-16 py-8 bg-gradient-to-r from-[#578451] to-[#144443] min-h-screen">
+            <ScrollReveal className="fifth rounded-3xl w-[97%] max-w-[2091px]  mx-auto px-6 sm:px-12 md:px-16 lg:px-20 md:py-16 py-5 bg-gradient-to-r from-[#578451] to-[#144443]">
                 <ScrollReveal className=' text-white'>
                     <div className='flex flex-col justify-center items-center'>
                         <div className='flex items-center gap-3'>
                             <span className='text-[#0a9695]'><IoDiamondSharp size={28} /></span>
                             <h1 className=' bg-gradient-to-r from-[#0a9695] to-[#b8e96d]  bg-clip-text text-transparent text-2xl'>Our services</h1>
                         </div>
-                        
+
                         <h1 className='text-4xl bg-gradient-to-r from-[#b8e96d] to-[#0a9695]  bg-clip-text text-transparent mt-10 md:mt-13 text-center md:w-1/2'>For your very specific industry, we have <span className=''>highly-tailored IT solutions.</span></h1>
                     </div>
                     <div className='mt-25' >
@@ -346,7 +341,7 @@ const Hero = () => {
                     </div>
                 </ScrollReveal>
             </ScrollReveal>
-            <div className="sixth py-3  w-[97%] mx-auto mt-0">
+            <div className="sixth py-3 mt-2 w-[97%] mx-auto ">
                 <ServiceMarquee />
             </div>
 

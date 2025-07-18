@@ -19,6 +19,7 @@ const AutoSlider = ({ slides }) => {
                 640: { slidesPerView: 1 },
                 768: { slidesPerView: 2 },
                 1024: { slidesPerView: 3 },
+                1423: { slidesPerView: 4 },
             }}
         >
             {slides.map((item, index) => (

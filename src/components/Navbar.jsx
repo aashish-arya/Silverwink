@@ -6,11 +6,31 @@ import { IoLogoInstagram } from "react-icons/io";
 import { IoIosCall } from "react-icons/io";
 import { FaArrowRight } from "react-icons/fa";
 import sitelogo from '../assets/silverwinkLogo.png'
+import { VscMail } from "react-icons/vsc";
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false)
     return (
         <div>
+            <div className='flex h-10 w-full items-center justify-between px-10'>
+                <div className='flex justify-center items-center'>
+                    <div className='flex justify-center items-center gap-2'><VscMail size={22} /> <span>contact@silverwinksolutions.com</span></div>
+                    <div className=' hidden xl:flex border-gray-500 items-center px-5'>
+                        <IoIosCall /> <span>+91-6396964636</span>
+                    </div>
+                </div>
+                <div className='flex justify-center items-center gap-1'>
+                    <span>Follow Us:</span>
+                    <div className='flex items-center'>
+                        <div className='flex justify-self-auto  lg:w-32 items-center gap-4 lg:gap-5'>
+                            <TiSocialFacebook className='text-gray-300 hover:text-black hover:cursor-pointer transition-colors duration-400 ease-in' size={24} />
+                            <RiTwitterXFill className='text-gray-300 hover:text-black hover:cursor-pointer transition-colors duration-400 ease-in' size={20} />
+                            <IoLogoInstagram className='text-gray-300 hover:text-black hover:cursor-pointer transition-colors duration-400 ease-in' size={20} />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr />
             <nav className='flex min-w-screen px-3 sm:px-12 py-2 gap-4 md:justify-around justify-between items-center'>
                 <img width={60} src={sitelogo} alt="" />
                 <ul className=' gap-5 hidden md:flex'>
@@ -83,16 +103,7 @@ const Navbar = () => {
                         </div>
                     </div>
                 </ul>
-                <div className='flex items-center'>
-                    <div className='  flex md:hidden lg:flex justify-self-auto  lg:w-32 items-center gap-4 lg:gap-5'>
-                        <TiSocialFacebook className='text-gray-300 hover:text-black hover:cursor-pointer transition-colors duration-400 ease-in' size={24} />
-                        <RiTwitterXFill className='text-gray-300 hover:text-black hover:cursor-pointer transition-colors duration-400 ease-in' size={20} />
-                        <IoLogoInstagram className='text-gray-300 hover:text-black hover:cursor-pointer transition-colors duration-400 ease-in' size={20} />
-                    </div>
-                    <div className=' border-l hidden xl:flex border-gray-500 items-center px-5'>
-                        <IoIosCall /> <span>+91-6396964636</span>
-                    </div>
-                </div>
+
                 <div className='bg-[#f0b249]  font-medium hover:scale-105 active:scale-95 active:bg-black active:text-white hover:bg-black hover:cursor-pointer hover:text-white transition-all duration-100 rounded-4xl lg:px-5 px-3 py-1 lg:py-2 text-xs sm:text-[17px]'>Free Consultation</div>
                 <div className='md:hidden'>
                     <button onClick={() => setIsOpen(!isOpen)} className='focus:outline-none'>
