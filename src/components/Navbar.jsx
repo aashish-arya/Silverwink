@@ -12,7 +12,7 @@ const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false)
     return (
         <div>
-            <div className='flex h-10 w-full items-center justify-between px-10'>
+            <div className='hidden md:flex h-10 w-full items-center justify-between px-10'>
                 <div className='flex justify-center items-center'>
                     <div className='flex justify-center items-center gap-2'><VscMail size={22} /> <span>contact@silverwinksolutions.com</span></div>
                     <div className=' hidden xl:flex border-gray-500 items-center px-5'>
@@ -31,8 +31,14 @@ const Navbar = () => {
                 </div>
             </div>
             <hr />
-            <nav className='flex min-w-screen px-3 sm:px-12 py-2 gap-4 md:justify-around justify-between items-center'>
-                <img width={60} src={sitelogo} alt="" />
+            <nav className='flex min-w-screen px-3 lg:px-12 py-2 gap-4 md:justify-around justify-between items-center'>
+                <div className='flex justify-center items-center sm:gap-5'>
+                    <img width={60} className='cursor-pointer' src={sitelogo} alt="" />
+                    <div className='flex flex-col justify-center cursor-pointer items-center'>
+                        <h1 className='text-[#f0b249] text-sm sm:text-xl'>SILVERWINK</h1>
+                        <p className='sm:text-[12px] text-[9px]'>IT SOLUTIONS</p>
+                    </div>
+                </div>
                 <ul className=' gap-5 hidden md:flex'>
                     <div className='group relative'>
                         <NavLink to='/' className="flex flex-col items-center gap-1">
@@ -104,7 +110,7 @@ const Navbar = () => {
                     </div>
                 </ul>
 
-                <div className='bg-[#f0b249]  font-medium hover:scale-105 active:scale-95 active:bg-black active:text-white hover:bg-black hover:cursor-pointer hover:text-white transition-all duration-100 rounded-4xl lg:px-5 px-3 py-1 lg:py-2 text-xs sm:text-[17px]'>Free Consultation</div>
+                <div className='bg-[#f0b249]  font-medium hover:scale-105 active:scale-95 active:bg-black active:text-white hover:bg-black hover:cursor-pointer hover:text-white transition-all duration-100 rounded-4xl lg:px-5 px-2 lg:py-2 text-xs py-2 text-nowrap sm:text-[17px]'>Free Consultation</div>
                 <div className='md:hidden'>
                     <button onClick={() => setIsOpen(!isOpen)} className='focus:outline-none'>
                         <div className='space-y-1'>

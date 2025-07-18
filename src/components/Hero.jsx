@@ -284,7 +284,7 @@ const Hero = () => {
                 </ScrollReveal>
             </div>
 
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 px-4 sm:px-6 md:px-8 lg:px-12 2xl:px-96 py-10 bg-white">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 px-4 sm:px-6 md:px-8 lg:px-12  2xl:px-96 py-10 bg-white">
                 {/* 1 */}
                 <ScrollReveal delay={0.1}>
                     <div className="w-full max-w-[14rem] aspect-square rounded-full border border-gray-200 shadow-sm flex flex-col justify-center items-center text-center p-4 mx-auto transition-all duration-500 hover:cursor-pointer shadow-green-950 hover:scale-110 hover:shadow-2xl">
@@ -326,7 +326,7 @@ const Hero = () => {
                 </ScrollReveal>
             </div>
 
-            <ScrollReveal className="fifth rounded-3xl w-[97%] max-w-[2091px]  mx-auto px-6 sm:px-12 md:px-16 lg:px-20 md:py-16 py-5 bg-gradient-to-r from-[#578451] to-[#144443]">
+            <ScrollReveal className="fifth rounded-3xl w-[97%] max-w-[2091px]  mx-auto px-6 sm:px-12 md:px-16 lg:px-20 md:py-16 py-7 bg-gradient-to-r from-[#578451] to-[#144443]">
                 <ScrollReveal className=' text-white'>
                     <div className='flex flex-col justify-center items-center'>
                         <div className='flex items-center gap-3'>
@@ -336,7 +336,7 @@ const Hero = () => {
 
                         <h1 className='text-4xl bg-gradient-to-r from-[#b8e96d] to-[#0a9695]  bg-clip-text text-transparent mt-10 md:mt-13 text-center md:w-1/2'>For your very specific industry, we have <span className=''>highly-tailored IT solutions.</span></h1>
                     </div>
-                    <div className='mt-25' >
+                    <div className=' mt-12 md:mt-25' >
                         <AutoSlider slides={cards} />
                     </div>
                 </ScrollReveal>
