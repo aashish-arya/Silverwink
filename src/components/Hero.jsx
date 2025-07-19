@@ -100,7 +100,7 @@ const Hero = () => {
                 <div className="absolute inset-0 bg-gradient-to-r from-black/80 to-transparent"></div>
 
                 {/* Main Content */}
-                <div className="relative z-10 flex flex-col justify-center items-center text-white px-4 py-8 ">
+                <div className="relative z-10 flex flex-col justify-center items-center text-white px-4 py-2 ">
                     {/* Heading */}
                     <h1 className="text-5xl sm:text-4xl md:text-5xl lg:text-6xl text-center font-bold sm:leading-tight">
                         <Typewriter
@@ -115,7 +115,7 @@ const Hero = () => {
 
                     {/* Box Reveal on Scroll */}
                     {showBox && (
-                        <ScrollReveal className="bg-white/10 backdrop-blur-md w-full max-w-4xl mt-10 space-y-15 px-6 py-12 sm:px-10 rounded-3xl text-center text-white">
+                        <ScrollReveal className="bg-white/10 backdrop-blur-md w-full max-w-4xl mt-16 xl:mt-5 2xl:mt-10 space-y-12 md:space-y-15 lg:space-y-3  px-6 py-12 sm:px-10 rounded-3xl text-center text-white">
 
                             {/* Highlight Box */}
                             {/* Highlight Box */}
