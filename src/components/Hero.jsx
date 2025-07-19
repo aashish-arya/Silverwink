@@ -93,14 +93,14 @@ const Hero = () => {
 
         <div>
             <div
-                className="first w-full max-h-[100vh] relative bg-cover bg-center sm:py-3"
+                className="first w-full min-h-[88vh] sm:min-h-[85vh] relative bg-cover bg-center sm:py-3"
                 style={{ backgroundImage: `url(${heroimg})` }}
             >
                 {/* Dark Gradient Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-r from-black/80 to-transparent"></div>
 
                 {/* Main Content */}
-                <div className="relative z-10 flex flex-col justify-center items-center text-white px-4 py-3">
+                <div className="relative z-10 flex flex-col justify-center items-center text-white px-4 py-8 ">
                     {/* Heading */}
                     <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl text-center font-bold sm:leading-tight">
                         <Typewriter
@@ -115,7 +115,7 @@ const Hero = () => {
 
                     {/* Box Reveal on Scroll */}
                     {showBox && (
-                        <ScrollReveal className="bg-white/10 backdrop-blur-md w-full max-w-4xl mt-4 space-y-5 px-6 sm:px-10 py-10 rounded-2xl text-center text-white">
+                        <ScrollReveal className="bg-white/10 backdrop-blur-md w-full max-w-4xl mt-2 space-y-5 px-6 sm:px-10 py-10 rounded-2xl text-center text-white">
 
                             {/* Highlight Box */}
                             {/* Highlight Box */}
@@ -143,7 +143,7 @@ const Hero = () => {
                             </div>
 
                             {/* Button */}
-                            <div className="border border-gray-600 bg-[#132730] hover:shadow-2xl hover:bg-[#167e4a] hover:border-white hover:scale-105 duration-200 group rounded-full flex items-center justify-center gap-2 sm:gap-4 mt-10 w-fit mx-auto px-4 sm:px-6 py-2 sm:py-3">
+                            <div className="border border-gray-600 bg-[#132730] hover:shadow-2xl hover:cursor-pointer hover:bg-[#167e4a] hover:border-white hover:scale-105 duration-200 group rounded-full flex items-center justify-center gap-2 sm:gap-4 mt-10 w-fit mx-auto px-4 sm:px-6 py-2 sm:py-3">
 
                                 {/* Button Text */}
                                 <span className="text-base sm:text-xl md:text-2xl font-semibold whitespace-nowrap">
