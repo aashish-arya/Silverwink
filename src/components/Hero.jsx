@@ -102,7 +102,7 @@ const Hero = () => {
                 {/* Main Content */}
                 <div className="relative z-10 flex flex-col justify-center items-center text-white px-4 py-8 ">
                     {/* Heading */}
-                    <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl text-center font-bold sm:leading-tight">
+                    <h1 className="text-5xl sm:text-4xl md:text-5xl lg:text-6xl text-center font-bold sm:leading-tight">
                         <Typewriter
                             words={['WELCOME TO SILVERWINK IT SOLUTIONS']}
                             cursor
@@ -115,7 +115,7 @@ const Hero = () => {
 
                     {/* Box Reveal on Scroll */}
                     {showBox && (
-                        <ScrollReveal className="bg-white/10 backdrop-blur-md w-full max-w-4xl mt-2 space-y-15 px-6 py-12 sm:px-10  rounded-2xl text-center text-white">
+                        <ScrollReveal className="bg-white/10 backdrop-blur-md w-full max-w-4xl mt-10 space-y-15 px-6 py-12 sm:px-10 rounded-3xl text-center text-white">
 
                             {/* Highlight Box */}
                             {/* Highlight Box */}
