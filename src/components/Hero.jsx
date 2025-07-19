@@ -93,16 +93,16 @@ const Hero = () => {
 
         <div>
             <div
-                className="first w-full min-h-screen relative bg-cover bg-center"
+                className="first w-full max-h-[100vh] relative bg-cover bg-center sm:py-3"
                 style={{ backgroundImage: `url(${heroimg})` }}
             >
                 {/* Dark Gradient Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-r from-black/80 to-transparent"></div>
 
                 {/* Main Content */}
-                <div className="relative z-10 flex flex-col justify-center items-center text-white px-4 py-16 sm:py-20 lg:py-32">
+                <div className="relative z-10 flex flex-col justify-center items-center text-white px-4 py-3">
                     {/* Heading */}
-                    <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-center font-bold leading-snug sm:leading-tight">
+                    <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl text-center font-bold sm:leading-tight">
                         <Typewriter
                             words={['WELCOME TO SILVERWINK IT SOLUTIONS']}
                             cursor
@@ -115,7 +115,7 @@ const Hero = () => {
 
                     {/* Box Reveal on Scroll */}
                     {showBox && (
-                        <ScrollReveal className="bg-white/10 backdrop-blur-md w-full max-w-4xl mt-10 space-y-5 px-6 sm:px-10 py-10 rounded-2xl text-center text-white">
+                        <ScrollReveal className="bg-white/10 backdrop-blur-md w-full max-w-4xl mt-4 space-y-5 px-6 sm:px-10 py-10 rounded-2xl text-center text-white">
 
                             {/* Highlight Box */}
                             {/* Highlight Box */}

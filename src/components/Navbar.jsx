@@ -12,27 +12,27 @@ const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false)
     return (
         <div>
-            <div className='hidden lg:flex h-10 w-full items-center justify-between px-2'>
+            <div className='hidden lg:flex h-9 w-full mx-auto items-center justify-between px-2'>
                 <div className='flex justify-center items-center'>
-                    <div className='flex justify-center items-center gap-2'><VscMail size={22} /> <span>contact@silverwinksolutions.com</span></div>
+                    <div className='flex justify-center items-center gap-2'><VscMail size={22} /><span className='text-sm'>contact@silverwinksolutions.com</span></div>
                     <div className=' hidden xl:flex border-gray-500 items-center px-5'>
-                        <IoIosCall /> <span>+91-6396964636</span>
+                        <IoIosCall /> <span className='text-sm'>+91-6396964636</span>
                     </div>
                     <div className='ml-20 flex'><span className='text-blue-600 text-xs'>Update: <span className='text-gray-500 text-center'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, cupiditate.</span></span></div>
                 </div>
-                <div className='flex justify-center items-center gap-1'>
-                    <span>Follow Us:</span>
+                <div className='flex justify-center items-center gap-3'>
+                    <span className='text-sm'>Follow Us:</span>
                     <div className='flex items-center'>
                         <div className='flex justify-self-auto  lg:w-32 items-center gap-4 lg:gap-5'>
-                            <TiSocialFacebook className='text-gray-300 hover:text-black hover:cursor-pointer transition-colors duration-400 ease-in' size={24} />
-                            <RiTwitterXFill className='text-gray-300 hover:text-black hover:cursor-pointer transition-colors duration-400 ease-in' size={20} />
-                            <IoLogoInstagram className='text-gray-300 hover:text-black hover:cursor-pointer transition-colors duration-400 ease-in' size={20} />
+                            <TiSocialFacebook className='text-gray-300 hover:text-black hover:cursor-pointer transition-colors duration-400 ease-in' size={22} />
+                            <RiTwitterXFill className='text-gray-300 hover:text-black hover:cursor-pointer transition-colors duration-400 ease-in' size={18} />
+                            <IoLogoInstagram className='text-gray-300 hover:text-black hover:cursor-pointer transition-colors duration-400 ease-in' size={18} />
                         </div>
                     </div>
                 </div>
             </div>
             <hr />
-            <nav className='flex min-w-screen px-3 lg:px-12 py-2 gap-4 md:justify-between justify-between items-center'>
+            <nav className='flex mx-auto max-w-[93%] px-3  lg:px-12 py-2 gap-4 md:justify-between justify-between items-center'>
                 <div className='flex justify-center items-center md:gap-1 gap-5'>
                     <img width={60} className='cursor-pointer' src={sitelogo} alt="" />
                     <div className='flex flex-col justify-center cursor-pointer items-center'>
@@ -122,6 +122,7 @@ const Navbar = () => {
                     </button>
                 </div>
             </nav>
+            {/* sidebar  */}
             <div className={`fixed top-0 right-0 h-full w-64 bg-white shadow-lg z-50 transform transition-transform duration-300 ease-in-out ${isOpen ? 'translate-x-0' : 'translate-x-full'}`}>
                 <div className="flex justify-between items-center px-4 py-4 border-b">
                     <img width={45} src={sitelogo} alt="logo" />
@@ -142,7 +143,7 @@ const Navbar = () => {
                         <IoLogoInstagram className=' hover:text-black hover:cursor-pointer transition-colors duration-400 ease-in' size={20} />
                     </div>
                     <div className=' border-l hidden xl:flex border-gray-500 items-center px-5'>
-                        <IoIosCall /> <span>+91-6396964636</span>
+                        <IoIosCall /> <span>+91-8938970130</span>
                     </div>
                 </div>
             </div>
