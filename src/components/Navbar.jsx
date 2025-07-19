@@ -12,12 +12,13 @@ const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false)
     return (
         <div>
-            <div className='hidden md:flex h-10 w-full items-center justify-between px-10'>
+            <div className='hidden lg:flex h-10 w-full items-center justify-between px-2'>
                 <div className='flex justify-center items-center'>
                     <div className='flex justify-center items-center gap-2'><VscMail size={22} /> <span>contact@silverwinksolutions.com</span></div>
                     <div className=' hidden xl:flex border-gray-500 items-center px-5'>
                         <IoIosCall /> <span>+91-6396964636</span>
                     </div>
+                    <div className='ml-20 flex'><span className='text-blue-600 text-xs'>Update: <span className='text-gray-500 text-center'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, cupiditate.</span></span></div>
                 </div>
                 <div className='flex justify-center items-center gap-1'>
                     <span>Follow Us:</span>
@@ -31,11 +32,11 @@ const Navbar = () => {
                 </div>
             </div>
             <hr />
-            <nav className='flex min-w-screen px-3 lg:px-12 py-2 gap-4 md:justify-around justify-between items-center'>
-                <div className='flex justify-center items-center sm:gap-5'>
+            <nav className='flex min-w-screen px-3 lg:px-12 py-2 gap-4 md:justify-between justify-between items-center'>
+                <div className='flex justify-center items-center md:gap-1 gap-5'>
                     <img width={60} className='cursor-pointer' src={sitelogo} alt="" />
                     <div className='flex flex-col justify-center cursor-pointer items-center'>
-                        <h1 className='text-[#f0b249] text-sm sm:text-xl'>SILVERWINK</h1>
+                        <h1 className='text-[#f0b249] text-sm sm:text-md lg:text-xl'>SILVERWINK</h1>
                         <p className='sm:text-[12px] text-[9px]'>IT SOLUTIONS</p>
                     </div>
                 </div>

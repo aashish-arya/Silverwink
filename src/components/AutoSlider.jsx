@@ -24,7 +24,7 @@ const AutoSlider = ({ slides }) => {
         >
             {slides.map((item, index) => (
                 <SwiperSlide key={index}>
-                    <div className="flex flex-col items-center text-center bg-white/5 backdrop-blur-md rounded-3xl shadow-lg py-5 px-5 h-[350px] justify-around hover:shadow-xl transition duration-300 group cursor-pointer">
+                    <div className="flex flex-col  items-center text-center bg-white/5 backdrop-blur-md rounded-4xl  py-5 px-5 h-[350px] justify-around transition duration-300 group cursor-pointer">
                         {/* Image */}
                         <img
                             src={item.image}

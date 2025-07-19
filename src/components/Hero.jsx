@@ -336,7 +336,7 @@ const Hero = () => {
 
                         <h1 className='text-4xl bg-gradient-to-r from-[#b8e96d] to-[#0a9695]  bg-clip-text text-transparent mt-10 md:mt-13 text-center md:w-1/2'>For your very specific industry, we have <span className=''>highly-tailored IT solutions.</span></h1>
                     </div>
-                    <div className=' mt-12 md:mt-25' >
+                    <div className=' mt-12 md:mt-25 overflow-hidden' >
                         <AutoSlider slides={cards} />
                     </div>
                 </ScrollReveal>
