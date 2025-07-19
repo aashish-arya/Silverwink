@@ -9,14 +9,14 @@ import { FaLinkedin } from "react-icons/fa";
 const Footer = () => {
     return (
         <footer className="bg-gray-50 border-t border-gray-200 text-gray-700">
-            <ScrollReveal className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-10">
+            <ScrollReveal className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 grid text-center grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-10">
                 {/* Logo + Contact */}
                 <ScrollReveal delay={0.1} className="space-y-4">
-                    <div className="flex   space-x-1">
+                    <div className="flex justify-center items-center space-x-1">
                         <img src={sitelogo} width={45} height={45} viewBox="0 0 48 48" fill="none">
                         </img>
                         <div className="flex justify-center items-center flex-col">
-                            <h2 className="text-lg font-semibold text-[#f0b249]">Sivlerwink</h2>
+                            <h2 className="text-lg font-semibold text-[#f0b249]">Silverwink</h2>
                             <p className="text-xs font-semibold">IT Solutions</p>
                         </div>
                     </div>

@@ -15,7 +15,7 @@ const TestimonialSlider = ({ testimonials }) => {
     };
 
     return (
-        <div className="relative max-w-6xl mx-auto px-4 md:px-6 lg:px-8 py-16">
+        <div className="relative max-w-6xl mx-auto px-4 md:px-6 lg:px-8 py-5 md:py-10">
             {/* Header */}
             <div className="text-center mb-12">
                 <h2 className="text-3xl sm:text-4xl font-bold text-[#0b3130]">
@@ -27,7 +27,7 @@ const TestimonialSlider = ({ testimonials }) => {
             </div>
 
             {/* Swiper Wrapper */}
-            <div className="relative">
+            <div className="relative ">
                 <Swiper
                     modules={[Navigation, Pagination, A11y]}
                     spaceBetween={30}
@@ -94,7 +94,7 @@ const TestimonialSlider = ({ testimonials }) => {
                 </div>
 
                 {/* Custom Pagination Dots */}
-                <div className="custom-swiper-pagination flex justify-center mt-10 space-x-2" />
+                <div className="custom-swiper-pagination flex justify-center mt-4 sm:mt-10 space-x-2" />
             </div>
         </div>
     );
