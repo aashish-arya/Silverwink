@@ -115,7 +115,7 @@ const Hero = () => {
 
                     {/* Box Reveal on Scroll */}
                     {showBox && (
-                        <ScrollReveal className="bg-white/10 backdrop-blur-md w-full max-w-4xl mt-2 space-y-5 px-6 sm:px-10 py-10 rounded-2xl text-center text-white">
+                        <ScrollReveal className="bg-white/10 backdrop-blur-md w-full max-w-4xl mt-2 space-y-15 px-6 py-12 sm:px-10  rounded-2xl text-center text-white">
 
                             {/* Highlight Box */}
                             {/* Highlight Box */}
