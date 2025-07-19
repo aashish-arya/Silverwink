@@ -15,7 +15,7 @@ const TestimonialSlider = ({ testimonials }) => {
     };
 
     return (
-        <div className="relative max-w-6xl mx-auto px-4 md:px-6 lg:px-8 py-5 md:py-10">
+        <div className="relative max-w-6xl mx-auto px-4 md:px-6 lg:px-8 py-4">
             {/* Header */}
             <div className="text-center mb-12">
                 <h2 className="text-3xl sm:text-4xl font-bold text-[#0b3130]">

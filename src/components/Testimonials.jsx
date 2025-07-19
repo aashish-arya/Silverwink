@@ -67,7 +67,7 @@ const user = [
 const Testimonials = () => {
   return (
     <div>
-      <div className=' text-black min-h-[90vh] mt-2 sm:mt-5 md:mt-10'
+      <div className=' text-black min-h-[65vh] mt-2 sm:mt-5 md:mt-10'
         style={{ backgroundImage: `url(${Testimonialsimg})` }}>
         <h1 className='text-center text-gray-500'>TESTIMONIALS</h1>
         <h1 className='text-center mt-5 font-semibold text-5xl text-[#0b3130]'>Why do people praise about Silverwink?</h1>
